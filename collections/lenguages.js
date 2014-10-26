@@ -1,0 +1,1 @@
+Lenguages = new Mongo.Collection('types');

@@ -1,0 +1,28 @@
+<template name="practices">
+{{> quickForm collection="Practices" id="insertPracticesForm" type="insert"}}
+<table class="table table-responsive">
+	<thead>
+		<tr>
+			<th>Lenguage</th>
+			<th>Original</th>
+			<th>Code</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each all}}
+			<tr>
+				<td>{{lenguage}}</td>
+				<td>
+					<span class="label label-success">Code Original</span>
+					<pre  class="pre-scrollable"><code class="nohighlight">{{codeOriginal}}</code></pre>
+					<span class="label label-error">Code Error</span>
+					<pre  class="pre-scrollable"><code class="nohighlight">{{codeError}}</code></pre>
+				</td>
+				<td><span class="label label-danger">{{points}}</span></td>
+				<td></td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
+</template>

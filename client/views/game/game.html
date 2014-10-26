@@ -1,0 +1,14 @@
+<template name="game">
+	{{#if win}}
+    <h2>{{count}}</h2>
+    <div class="form-group">
+    	<h2>{{lenguage}}</h2>
+       <textarea class="code" id="code">{{ code }}</textarea>
+    </div>
+    <button class="finish btn btn-success btn-block btn-lg">Terminar</button>
+    {{/if}}
+    {{>finish}}
+</template>
+<template name="finish">
+	{{text}}
+</template>
